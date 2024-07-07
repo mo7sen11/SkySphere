@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkySphere</title>
+    <link rel="shortcut icon" href="images/weather-app.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNavDropdown">
+    <nav class="navbar navbar-expand-lg px-2 px-md-0 fixed-top">
+        <div class="container">
+            <p class="navbar-brand text-light p-0 m-0"> <i class="fa-solid fa-cloud"></i> SkySphere</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ms-2">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item  ms-2">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item  ms-2">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ <div class="spinner d-none">
+    <div class="lds-ripple">
+        <div></div><div></div>
+</div>
+
+ </div>
+    <section class="container-fluid px-4" id="home">
+        <section class="main-box bg-danger m-auto ">
+            <h1 class="text-center header z-1 position-relative">Discover the weather in every city you go </h1>
+            <div class="search-city bg-danger m-auto">
+                <input type="text" id="searchCityInput" placeholder="Search for a city...">
+                <button id="btnSearch"><i class="fa-solid fa-search"></i></button>
+            </div>
+            <p class=" position-relative z-2 mx-auto text-center fw-bold error mt-1 d-none">Ops! The Location Is Not
+                Founded Please Enter A correct Name Of City</p>
+            <div class="container-fluid mt-5 ">
+                <div class="row g-md-4 gy-4">
+                    <div class="col-lg-4  col-sm-12 z-1 mb-sm-4 ">
+                        <div class="item item-one text-center py-3 rounded-4 position-relative">
+                            <div
+                                class="time d-flex justify-content-between align-items-center position-absolute w-100 p-1  ">
+                                <span class="day">Sunday</span>
+                                <span class="date">3 July</span>
+                            </div>
+                            <span class="weather-desc fw-bold d-block m-auto mt-4 mb-2">Moderate rain</span>
+                            <div class="tempreture ">
+                                <div class=" d-flex  justify-content-center align-items-center">
+                                    <h2 class="cel_temperature">27.1</h2>
+                                    <span class="align-self-start">°C</span>
+                                </div>
+                                <div class=" d-flex  justify-content-center align-items-center">
+                                    <h5 class="feh_temperature">81</h5>
+                                    <span class="align-self-start">°F</span>
+                                </div>
+                            </div>
+                            <h3 class="h2 py-1  city-name">london</h3>
+                            <div class="more-info text-start p-2 ">
+                                <div class="row ">
+                                    <div class="col-sm-6 col-lg-12  col-xxl-6">
+                                        <div class="inner">
+                                            <ul class="list-unstyled m-0 p-0">
+                                                <li><i class="fa-solid fa-wind  "></i>Wind: <span
+                                                        class="wind-speed">13</span>km/h</li>
+                                                <li><i class="fa-regular fa-compass"></i>Wind Direction: <span
+                                                        class="wind-direction">East</span></li>
+                                                <li><i class="fa-solid fa-droplet "></i>Humidity: <span
+                                                        class="Humidity">60</span>%</li>
+                                                <li><i class="fa-solid fa-cloud "></i>cloud: <span
+                                                        class="cloud">0</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6  col-lg-12 col-xxl-6">
+                                        <div class="inner">
+                                            <ul class="list-unstyled m-0 p-0">
+                                                <li><i class="fa-solid fa-umbrella "></i>UV: <span class="uv">1</span>
+                                                </li>
+                                                <li><i
+                                                        class="fa-solid fa-temperature-three-quarters "></i>pressure:<span
+                                                        class="pressure">1007</span>mb
+                                                </li>
+                                                <li><i class="fa-solid fa-temperature-three-quarters "></i>Feels Like:
+                                                    <span class="feels-f"> 10</span>°F
+                                                </li>
+                                                <li><i class="fa-solid fa-temperature-three-quarters "></i>Feels Like:
+                                                    <span class="feels-c">43</span>°C
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4  col-sm-12 z-1 mb-sm-4 ">
+                        <div class="item item-two text-center py-3 rounded-4 position-relative">
+                            <div
+                                class="time d-flex justify-content-between align-items-center position-absolute w-100 p-1  ">
+                                <span class="day">Sunday</span>
+                                <span class="date">3 July</span>
+                            </div>
+                            <span class="weather-desc fw-bold d-block m-auto mt-4 mb-2">Moderate rain</span>
+                            <div class="tempreture ">
+                                <div class=" d-flex  justify-content-center align-items-center">
+                                    <h2 class="cel_temperature">27.1</h2>
+                                    <span class="align-self-start">°C</span>
+                                </div>
+                                <div class=" d-flex  justify-content-center align-items-center">
+                                    <h5 class="feh_temperature">81</h5>
+                                    <span class="align-self-start">°F</span>
+                                </div>
+                            </div>
+                            <h3 class="h2 py-1  city-name">london</h3>
+                            <div class="more-info text-start p-2 ">
+                                <div class="row ">
+                                    <div class="col-sm-6 col-lg-12  col-xxl-6">
+                                        <div class="inner">
+                                            <ul class="list-unstyled m-0 p-0">
+                                                <li><i class="fa-solid fa-wind  "></i>Wind: <span
+                                                        class="wind-speed">13</span>km/h</li>
+                                                <li><i class="fa-regular fa-compass"></i>Wind Direction: <span
+                                                        class="wind-direction">East</span></li>
+                                                <li><i class="fa-solid fa-droplet "></i>Humidity: <span
+                                                        class="Humidity">60</span>%</li>
+                                                <li><i class="fa-solid fa-cloud "></i>cloud: <span
+                                                        class="cloud">0</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6  col-lg-12 col-xxl-6">
+                                        <div class="inner">
+                                            <ul class="list-unstyled m-0 p-0">
+                                                <li><i class="fa-solid fa-umbrella "></i>UV: <span class="uv">1</span>
+                                                </li>
+                                                <li><i
+                                                        class="fa-solid fa-temperature-three-quarters "></i>pressure:<span
+                                                        class="pressure">1007</span>mb
+                                                </li>
+                                                <li><i class="fa-solid fa-temperature-three-quarters "></i>Feels Like:
+                                                    <span class="feels-f"> 10</span>°F
+                                                </li>
+                                                <li><i class="fa-solid fa-temperature-three-quarters "></i>Feels Like:
+                                                    <span class="feels-c">43</span>°C
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4  col-sm-12 z-1 mb-sm-4 ">
+                        <div class="item item-three text-center py-3 rounded-4 position-relative">
+                            <div
+                                class="time d-flex justify-content-between align-items-center position-absolute w-100 p-1  ">
+                                <span class="day">Sunday</span>
+                                <span class="date">3 July</span>
+                            </div>
+                            <span class="weather-desc fw-bold d-block m-auto mt-4 mb-2">Moderate rain</span>
+                            <div class="tempreture ">
+                                <div class=" d-flex  justify-content-center align-items-center">
+                                    <h2 class="cel_temperature">27.1</h2>
+                                    <span class="align-self-start">°C</span>
+                                </div>
+                                <div class=" d-flex  justify-content-center align-items-center">
+                                    <h5 class="feh_temperature">81</h5>
+                                    <span class="align-self-start">°F</span>
+                                </div>
+                            </div>
+                            <h3 class="h2 py-1  city-name">london</h3>
+                            <div class="more-info text-start p-2 ">
+                                <div class="row ">
+                                    <div class="col-sm-6 col-lg-12  col-xxl-6">
+                                        <div class="inner">
+                                            <ul class="list-unstyled m-0 p-0">
+                                                <li><i class="fa-solid fa-wind  "></i>Wind: <span
+                                                        class="wind-speed">13</span>km/h</li>
+                                                <li><i class="fa-regular fa-compass"></i>Wind Direction: <span
+                                                        class="wind-direction">East</span></li>
+                                                <li><i class="fa-solid fa-droplet "></i>Humidity: <span
+                                                        class="Humidity">60</span>%</li>
+                                                <li><i class="fa-solid fa-cloud "></i>cloud: <span
+                                                        class="cloud">0</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6  col-lg-12 col-xxl-6">
+                                        <div class="inner">
+                                            <ul class="list-unstyled m-0 p-0">
+                                                <li><i class="fa-solid fa-umbrella "></i>UV: <span class="uv">1</span>
+                                                </li>
+                                                <li><i
+                                                        class="fa-solid fa-temperature-three-quarters "></i>pressure:<span
+                                                        class="pressure">1007</span>mb
+                                                </li>
+                                                <li><i class="fa-solid fa-temperature-three-quarters "></i>Feels Like:
+                                                    <span class="feels-f"> 10</span>°F
+                                                </li>
+                                                <li><i class="fa-solid fa-temperature-three-quarters "></i>Feels Like:
+                                                    <span class="feels-c">43</span>°C
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="feedback py-5" id="testimonials">
+        <div class="container-fluid px-4">
+            <h1>Client's Feedback</h1>
+            <span></span>
+            <div id="carouselExampleIndicators" class="carousel slide my-5">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card-feedback ">
+                            <div class="row  gap-lg-2">
+                                <div class="img col-12 col-md-3 ">
+                                    <img src="images/feedback.jpg" class="w-100" alt="">
+                                </div>
+                                <div class="feedback-info col-12 col-md-9  ">
+                                    <h3>Jane Doe</h3>
+                                    <span><i class="fa-solid fa-location-dot"></i>United</span>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus adipisci
+                                        culpa assumenda est animi, totam illum ut officia iste maxime.</p>
+                                    <ul class=" stars list-unstyled d-flex align-items-center  ">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-feedback ">
+                            <div class="row  gap-lg-2">
+                                <div class="img col-12 col-md-3 ">
+                                    <img src="images/feedback.jpg" class="w-100" alt="">
+                                </div>
+                                <div class="feedback-info col-12 col-md-9  ">
+                                    <h3>Jane Doe</h3>
+                                    <span><i class="fa-solid fa-location-dot"></i>United</span>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus adipisci
+                                        culpa assumenda est animi, totam illum ut officia iste maxime.</p>
+                                    <ul class=" stars list-unstyled d-flex align-items-center  ">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-feedback ">
+                            <div class="row  gap-lg-2">
+                                <div class="img col-12 col-md-3 ">
+                                    <img src="images/feedback.jpg" class="w-100" alt="">
+                                </div>
+                                <div class="feedback-info col-12 col-md-9  ">
+                                    <h3>Jane Doe</h3>
+                                    <span><i class="fa-solid fa-location-dot"></i>United</span>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus adipisci
+                                        culpa assumenda est animi, totam illum ut officia iste maxime.</p>
+                                    <ul class=" stars list-unstyled d-flex align-items-center  ">
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-regular fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators ">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid email-section px-4 py-4">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="img">
+                    <img src="images/keep up.webp" class="w-100" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6  email-info ">
+                <h2 class="email-section-header mt-0">Keep up with the latest from SkySphere</h2>
+                <h4>Subscribe to our blog and get free tips, inspiration, and resources delivered directly to
+                    your inbox.</h4>
+                <div class="subscribe">
+                    <input type="email" id="emailInput" placeholder="Email Here">
+                    <button>Subscribe</button>
+                </div>
+                <p>Unsubscribe anytime. By entering your email, you agree to receive marketing emails from SkySphere.
+                </p>
+                <div class="icons  d-flex align-items-center gap-4 py-2 mt-4">
+                    <i class="fa-brands fa-facebook fs-4"></i>
+                    <i class="fa-brands fa-x-twitter fs-4"></i>
+                    <i class="fa-brands fa-instagram fs-4"></i>
+                    <i class="fa-brands fa-facebook-messenger fs-4"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="contact" class="contact pt-5">
+        <div class="container p-5 position-relative z-3 bg-white mt-5 ">
+            <div class="row ">
+                <form class="col-lg-6 col-sm-12" action="">
+                    <h2 class="h1 py-2 h1 position-relative  mb-5 mt-md-0  mt-5">Contact Us</h2>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                            placeholder="Message"></textarea></textarea>
+                    </div>
+                    <button type="button">Send Message</button>
+                </form>
+                <div class="touch col-lg-6 col-sm-12 ">
+                    <h2 class="h1 py-2 h1 position-relative  mb-5 mt-md-0  mt-5">Get in Touch</h2>
+                    <p class="lead text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                        dolorum dolorem soluta quidem expedita aperiam aliquid at. Totam magni ipsum suscipit amet?
+                        Autem nemo esse laboriosam ratione nobis mollitia inventore?</p>
+                    <ul class="list-unstyled">
+                        <li class="py-1"><i class="fa-solid fa-map-location me-3"></i><span
+                                class="text-secondary fw-semibold">329 WASHINGTON ST BOSTON, MA
+                                02108</span></li>
+                        <li class="py-1"><i class="fa-solid fa-phone  me-3"></i><span
+                                class="text-secondary  fw-semibold ">(617) 557-0089</span></li>
+                        <li class="py-1"><i class="fa-solid fa-message  me-3"></i><span
+                                class="text-secondary  fw-semibold"> contact@example.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copy Right 2024 © By <span>MO7SEN</span> All Rights Reserved</p>
+    </footer>
+    <script src=" js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
